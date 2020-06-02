@@ -6,7 +6,7 @@
                 style="width: 100%;"
                 :data="message.slice((currentPage-1)*pagesize,currentPage*pagesize)"
             >
-                <el-table-column label="ID" prop="id" width="200"></el-table-column>
+                <el-table-column label="ID3" prop="id" width="200"></el-table-column>
                 <el-table-column value-format="yyyy-MM-dd" label="创建自" prop="created_at" width="180"></el-table-column>
                 <el-table-column label="用户姓名" prop="publisher" width="180"></el-table-column>
                 <el-table-column label="内容" prop="context" width="180"></el-table-column>
@@ -16,7 +16,8 @@
                 @size-change="handleSizeChange"
                 @current-change="handleCurrentChange"
                 :current-page="currentPage"
-                :page-size="pagesize"       
+                :page-size="pagesize"
+                :page-sizes=[1,2,3]       
                 layout="total, sizes, prev, pager, next, jumper"
                 :total="message.length"
             ></el-pagination>
